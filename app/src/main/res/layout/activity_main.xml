@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_tabHost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TabWidget>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/Content1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/content_input_tv1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="클릭히여 노래 장르를 선택하세요"
+                    android:textSize="20sp"
+
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/content_input_btn"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#AC9F9F"
+                    app:layout_constraintBottom_toBottomOf="@id/content_input_btn"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/content_input_btn"></View>
+
+                <Button
+                    android:id="@+id/content_input_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="검색"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/content_input_et2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="제목을 입력하시오"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@id/content_input_btn" />
+
+                <EditText
+                    android:id="@+id/content_input_et3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:hint="가사를 입력하시오"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toTopOf="@id/content_input_btn2"
+                    app:layout_constraintTop_toBottomOf="@id/content_input_et2" />
+
+                <Button
+                    android:id="@+id/content_input_btn2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="저장"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/content2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/content_search_et1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/content_search_btn1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/content_search_btn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="검색"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/content_search_et1">
+
+                    <TextView
+                        android:id="@+id/content_search_tv1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="노래가 검색되면 가사가 나옵니다."
+                        android:textSize="20sp" />
+                </ScrollView>
+            </android.support.constraint.ConstraintLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+
+</TabHost>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="song_kind">
+        <item>락</item>
+        <item>클래식</item>
+        <item>발라드</item>
+        <item>팝</item>
+        <item>힙팝</item>
+    </string-array>
+</resources>
